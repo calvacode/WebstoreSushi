@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <aside id="aside">
+        <div class="container-brand">
+            <img class="brand" src="img/logo-nosso-sushi.png">
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li id='li-novo-pedido'><a href="#novo-pedido"><span>Novo Pedido</span><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                <li id='li-consultar-pedido'><a href="#consultar-pedido"><span>Consultar Pedido</span><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                <li id='li-entregas'><a href="#entregas"><span>Entregas</span><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                <li id='li-cadastrar-prato'><a href="#cadastrar-prato"><span>Cadastrar Prato</span><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="main">
+        <section class="container servico-janela" id="novo-pedido">
+            <div class="barra">
+                <label>Novo Pedido</label>
+                <button class="btn-fechar"><i class="fa fa-times"></i></button>
+            </div>
+
+            <div class="servico-painel">
+                <form class="grid-5 form-cliente-pgto">
+                    <h3 class="subtitulo">Dados do Cliente</h3>
+                    <div class="campo-texto">
+                        <input type="text" class="teste" id="nome-cliente" required>
+                        <label>Nome</label>
+                    </div>
+                    <div class="campo-texto">
+                        <input type="text" class="teste" id="telefone-cliente" required>
+                        <label>Telefone</label>
+                    </div>
+                    <div class="campo-texto">
+                        <input type="text" class="teste" id="endereco-cliente" required>
+                        <label>Endereço</label>
+                    </div>
+
+                    <h3 class="subtitulo margem-pgto">Forma de Pagamento</h3>
+                    <ul class="lista-radio-pgto">
+                        <li><input type="radio" name="opcao-pagamento" id="dinheiro"><label>Dinheiro</label></li>
+                        <li><input type="radio" name="opcao-pagamento" id="debito-credito"><label>Débito / Crédito</label></li>
+                        <li><input type="radio" name="opcao-pagamento" id="outro"><label>Outro</label></li>
+                    </ul>
+                    <div class="campo-texto">
+                        <input type="text" id="outro" required>
+                        <label>Outro</label>
+                    </div>
+                </form>
+                <div class="grid-11" id="itens-pedido">
+                    <ul>
+                        <li class="item-pedido">
+                            <h6 class="item-titulo">Sushi Salmao</h6>
+                            <label id="sushi">R$ 0.00</label>
+                            <div class="imagem-item"><img src="img/itens/sushi-salmao.jpg"></div>
+                            <div class="contador-pedido">
+                                <button class="btn-min" onclick="calculoMin(sushi, sushi_salmao, 10);"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <input id="sushi_salmao" type="text" value='0'>
+                                <button class="btn-plus" onclick="calculo(sushi, sushi_salmao, 10);"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
+                        </li>
+
+                        <li class="item-pedido">
+                            <h6 class="item-titulo">Rot Holl</h6>
+                            <div class="imagem-item" id="rot-roll"><img src="img/itens/hot-roll.jpg"></div>
+                            <div class="contador-pedido">
+                                <button class="btn-min"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <input type="text" placeholder="0">
+                                <button class="btn-plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
+                        </li>
+
+                        <!-- <li class="item-pedido">
+                            <h6 class="item-titulo">Temaki Salmao</h6>
+                            <div class="imagem-item" id="temaki-salmao"><img src="img/itens/temaki-salmao.jpg"></div>
+                            <div class="contador-pedido">
+                                <button class="btn-min"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <input type="text" placeholder="0">
+                                <button class="btn-plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
+                        </li>
+
+                        <li class="item-pedido">
+                            <h6 class="item-titulo">Tempura</h6>
+                            <div class="imagem-item" id="tempura"><img src="img/itens/tempura.jpg"></div>
+                            <div class="contador-pedido">
+                                <button class="btn-min"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <input type="text" placeholder="0">
+                                <button class="btn-plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div>
+        </section>
+
+
+        <section class="container servicos" id="consultar-pedido">
+            <div class="barra">
+                <label>Consultar Pedido</label>
+                <button class="btn-fechar"><i class="fa fa-times"></i></a>
+            </div>
+        </section>
+
+        <section class="container servicos" id="entregas">
+            <div class="barra">
+                <label>Entregas</label>
+                <button class="btn-fechar"><i class="fa fa-times"></i></a>
+            </div>
+        </section>
+
+        <section class="container servicos" id="cadastrar-prato">
+            <div class="barra">
+                <label>Cadastrar Prato</label>
+                <button class="btn-fechar"><i class="fa fa-times"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="js/libs/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

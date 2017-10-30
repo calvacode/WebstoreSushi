@@ -1,0 +1,340 @@
+/*==================== DEFINICOES GERAIS ====================*/
+
+html, body {
+    height: 100%;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+
+/*==================== TITULOS E SUBTITULOS ====================*/
+
+.item-titulo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 18px;
+}
+
+
+/*====================BOTOES ====================*/
+
+
+/*========== BOTAO FECHAR ==========*/
+
+.btn-fechar {
+    width: 30px;
+    height: 100%;
+    display: block;
+    color: #fff;
+    text-align: center;
+    background: none;
+    border: none;
+    padding: 6px 0;
+    float: right;
+}
+
+.btn-fechar:hover {
+    background: #d22026;
+}
+
+.btn-min, .btn-plus {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.btn-fechar:focus, .btn-min:focus, .btn-plus:focus {
+    outline: none;
+}
+
+
+/*==================== ASIDE ====================*/
+
+#aside {
+    width: 13%;
+    height: 100%;
+    background: #222222;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+}
+
+
+/*========== LOGO ==========*/
+
+#aside .brand {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#aside .container-brand {
+    width: 100%;
+    padding: 15px 0;
+    background: #d22026;
+}
+
+
+/*========== NAVBAR ==========*/
+
+#aside #navbar ul li {
+    width: 100%;
+    background: #222222;
+    text-align: right;
+    border-top: .5px solid rgba(67, 67, 67, .8);
+    cursor: pointer;
+    transition: width .4s;
+}
+
+#aside #navbar ul li:last-child {
+    border-bottom: .5px solid rgba(67, 67, 67, .8);
+}
+
+#aside #navbar ul li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, .9);
+    letter-spacing: .05em;
+}
+
+#aside #navbar ul li.menu-ativo-li {
+    width: 105%;
+}
+
+#aside #navbar ul li i.menu-ativo-i {
+    color: #d22026;
+}
+
+#aside #navbar ul li span, #aside #navbar ul li i {
+    margin-right: 15px;
+}
+
+#aside #navbar ul li:hover {
+    width: 105%;
+}
+
+#aside #navbar ul li:hover i {
+    color: #d22026;
+}
+
+#aside #navbar ul li i {
+    transition: all ease .4s;
+}
+
+
+/*==================== MAIN ====================*/
+
+#main {
+    width: 87%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    background: url('../img/bg-main.png');
+    right: 0;
+}
+
+
+/*========== BARRA ==========*/
+
+#main .barra {
+    width: 100%;
+    height: 30px;
+    background: #404040;
+}
+
+.barra label {
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: .05em;
+    margin-top: 6px;
+    margin-left: 10px;
+    float: left;
+}
+
+
+/*==================== SERVICO-JANELA ====================*/
+
+.servico-janela {
+    background: #fff;
+    position: relative;
+    margin-top: 5%;
+}
+
+#novo-pedido, #consultar-pedido, #entregas, #cadastrar-prato {
+    display: none;
+}
+
+/*==================== SERVICO-PAINEL  ====================*/
+
+.servico-painel {
+    padding: 25px 30px;
+    overflow: hidden;
+    border: 1px solid rgba(117, 117, 117, .4);
+}
+
+.servico-painel .form-cliente-pgto {
+    margin: 0;
+    padding: 20px 30px 20px 0;
+    border-right: 1px solid rgba(117, 117, 117, .4);
+}
+
+.margem-pgto {
+    margin-top: 10%;
+}
+
+
+/*========== input[type="text"] ===========*/
+
+.campo-texto {
+    position: relative;
+    margin-top: 5%;
+}
+
+.campo-texto input[type="text"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(117, 117, 117, .7);
+    padding: 5px 5px;
+    margin: 10px 0;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.campo-texto label {
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 15px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.campo-texto input:focus~label, .campo-texto input:valid~label {
+    top: -10px;
+    font-size: 14px;
+    color: #d22026;
+}
+
+#itens-pedido {
+    width: 70%;
+    height: 450px;
+    margin: 0;
+    padding: 20px 0 20px 30px;
+    overflow: auto;
+}
+
+.item-pedido {
+    width: 20%;
+    /*border: 1px solid rgba(0, 0, 0, .1);*/
+    margin: 0 2.5% 4% 2.5%;
+    float: left;
+    position: relative;
+}
+
+.imagem-item {
+    width: 100%;
+    height: 115px;
+}
+
+.imagem-item img {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.contador-pedido {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.contador-pedido .fa-minus {
+    margin-right: 10px;
+}
+
+.contador-pedido .fa-plus {
+    margin-left: 10px;
+}
+
+.contador-pedido input[type="text"] {
+    font-size: 14px;
+    color: rgba(102, 102, 102, 0.4);
+    width: 42px;
+    height: 38px;
+    line-height: 41px;
+    text-align: center;
+}
+
+
+/*========== input[type="radio"] ===========*/
+
+.lista-radio-pgto li {
+    padding: 5px 0;
+}
+
+.lista-radio-pgto li:first-child {
+    margin-top: 15px;
+}
+
+.lista-radio-pgto li label {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 1650px) {
+    #aside #navbar ul li a, .barra label {
+        font-size: 13px;
+    }
+    .subtitulo {
+        font-size: 16px;
+    }
+    #itens-pedido {
+        height: 375px;
+    }
+    .contador-pedido input[type="text"] {
+        width: 32px;
+        height: 28px;
+        line-height: 31px;
+    }
+    .contador-pedido i {
+        font-size: 10px;
+    }
+    .contador-pedido .fa-minus {
+        margin-right: 5px;
+    }
+    .contador-pedido .fa-plus {
+        margin-left: 5px;
+    }
+    .imagem-item {
+        width: 100%;
+        height: 75px;
+    }
+    .item-titulo {
+        font-size: 14px;
+    }
+    .campo-texto input[type="text"] {
+        font-size: 13px;
+        padding: 3px;
+        margin: 8px 0;
+    }
+    .campo-texto label {
+        font-size: 14px;
+        left: 2px;
+        top: 12px;
+    }
+    .campo-texto input:focus~label, .campo-texto input:valid~label {
+        top: -8px;
+        font-size: 14px;
+    }
+}
